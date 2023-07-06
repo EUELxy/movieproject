@@ -2,12 +2,14 @@ let collector = document.getElementById('collector');
 function displayData(data) {
   for (let i = 0; i < data.results.length; i++) {
     let card = document.createElement('div');
+    card.style.width="14rem"
+    card.style.height="30rem"
     card.classList.add('card');
     let image = document.createElement('img');
     let text = document.createElement('h3');
     text.innerHTML = data.results[i].title;
     image.src =
-      'https://image.tmdb.org/t/p/w185/' + data.results[i].poster_path;
+      'https://image.tmdb.org/t/p/w500/' + data.results[i].poster_path;
     card.appendChild(image);
     card.appendChild(text);
     collector.appendChild(card);
